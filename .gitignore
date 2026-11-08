@@ -1,0 +1,99 @@
+# ==========================
+#  General Node / JS Rules
+# ==========================
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================
+#  Environment Files
+# ==========================
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+*.env.backup
+*.env.temp
+
+# Example env file (safe to keep)
+!.env.example
+
+# ==========================
+# Build Artifacts
+# ==========================
+dist/
+build/
+frontend/dist/
+backend/dist/
+.vite
+.vercel
+.netlify
+tmp/
+temp/
+
+# ==========================
+# AI / Cache / Runtime
+# ==========================
+__pycache__/
+.cache/
+coverage/
+*.pid
+*.seed
+*.pid.lock
+
+# ==========================
+#  Editor / OS Files
+# ==========================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================
+#  Logs
+# ==========================
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================
+#  Testing / Reports
+# ==========================
+coverage/
+*.lcov
+jest-report/
+test-output/
+
+# ==========================
+#  Miscellaneous
+# ==========================
+# Local service or deployment files
+.envrc
+*.bak
+*.tmp
+*.old
+*.orig
+*.rej
+
+# Firebase / AWS / Deployment config
+.firebase/
+.aws/
+*.pem
+*.key
+*.crt
+*.csr
+
+# ==========================
+#  Safe Includes
+# ==========================
+!.env.example
