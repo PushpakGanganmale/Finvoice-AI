@@ -1,3 +1,4 @@
+
 require("dotenv").config();
 
 const express = require("express");
@@ -10,7 +11,6 @@ const aiRoutes = require("./routes/aiRoutes");
 
 const app = express();
 
-// Middleware
 app.use(
   cors({
     origin: process.env.FRONTEND_URL || "*",
@@ -29,29 +29,40 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+// Ensure MongoDB is connected before API requests.
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.error("Database connection failed:", error.message);
+
+    res.status(503).json({
+      success: false,
+      message: "Database connection unavailable",
+    });
+  }
+});
+
 // API routes
 app.use("/api/auth", authRoutes);
 app.use("/api/invoices", invoiceRoutes);
 app.use("/api/ai", aiRoutes);
 
-// Start server only after MongoDB connects
-const startServer = async () => {
-  try {
-    await connectDB();
-
-    const PORT = process.env.PORT || 5000;
-
-    app.listen(PORT, "0.0.0.0", () => {
-      console.log(`Server running on port ${PORT}`);
-    });
-  } catch (error) {
-    console.error("Backend startup failed:", error.message);
-    process.exit(1);
-  }
-};
-
+// Local development only
 if (require.main === module && process.env.NODE_ENV !== "test") {
-  startServer();
+  const PORT = process.env.PORT || 5000;
+
+  connectDB()
+    .then(() => {
+      app.listen(PORT, "0.0.0.0", () => {
+        console.log(`Server running on port ${PORT}`);
+      });
+    })
+    .catch((error) => {
+      console.error("Backend startup failed:", error.message);
+      process.exit(1);
+    });
 }
 
 module.exports = app;
