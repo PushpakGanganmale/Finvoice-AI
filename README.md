@@ -1,127 +1,129 @@
 # 🧾 Finvoice AI
-[![Finvoice AI CI](https://github.com/Harsimar-Sahota/Finvoice-AI/actions/workflows/ci.yml/badge.svg)](https://github.com/Harsimar-Sahota/Finvoice-AI/actions/workflows/ci.yml)
+### AI-Powered Invoice Generator & Finance Assistant
 
-### AI-Powered Invoice Generator & Finance Assistant (MERN + Gemini AI)
+Finvoice AI is an AI-powered, full-stack SaaS application designed to automate invoicing and simplify financial workflows for freelancers and small businesses.
 
-**Finvoice AI** is a production-ready, full-stack SaaS app for automating invoicing and basic finance workflows.
-
-It turns plain text (emails, chats, notes) into structured invoices, sends AI-generated payment reminders, and shows revenue insights on a clean dashboard — all powered by **Google Gemini**.
-
-**Highlights**
-
--  Built with the **MERN stack** (MongoDB, Express, React, Node)
--  **AI features** using Google Gemini (`@google/generative-ai`)
--  **JWT authentication** + protected routes
--  **Dockerized** with `docker-compose`
--  **CI/CD** via GitHub Actions
--  **Unit tests** with Jest
----
+It converts unstructured text into structured invoices, generates AI-powered payment reminders, tracks invoice payments, and provides revenue insights through an intuitive dashboard.
 
 ## 🌐 Live Demo
 
-🔗 **App URL:** **[https://www.finvoiceai.app](https://www.finvoiceai.app)**
-🔐 **Test Credentials:**
-
-```
-email: Demo@FinvoiceAI.com
-password: Demopass12$
-```
----
-
-## 🖼️ Screenshots
-
-###  Dashboard Overview
-![Dashboard](./screenshots/dashboard.png)
-
-###  Create Invoice
-![Create Invoice](./screenshots/create-invoice.png)
-
-###  AI-Generated Invoice
-![AI Invoice](./screenshots/ai-generated.png)
-
-###  AI Payment Reminder Email
-![Payment Reminder](./screenshots/reminder-email.png)
-
-###  Profile Settings
-![Profile Settings](./screenshots/profile-settings.png)
-
----
+🔗 **Live Application:** [https://www.finvoiceai.app](https://www.finvoiceai.app)
 
 ## 🧠 Overview
-Finvoice AI is aimed at freelancers and small businesses who need simple but smart invoicing.
 
-The app can:
+Finvoice AI helps freelancers and small businesses manage their invoicing operations efficiently using Artificial Intelligence.
 
-Parse unstructured text into a structured invoice
+The application transforms plain-text descriptions, emails, and notes into structured invoice data. It also generates professional payment reminder emails and provides a centralized dashboard for tracking financial activities.
 
-Generate payment reminder emails with AI
+### Key Capabilities
 
-Track paid / unpaid invoices and basic revenue stats
+- Convert unstructured text into structured invoices using AI.
+- Create, update, and manage invoices.
+- Generate AI-powered payment reminder emails.
+- Track paid, unpaid, and overdue invoices.
+- Monitor revenue and payment statistics.
+- Export invoices as PDF documents.
+- Securely manage user accounts and business details.
 
-Manage user profile and business details
-
-From a dev perspective, this project demonstrates:
-
-Building a real SaaS-style app with authentication & dashboards
-
-Integrating a modern AI API into an existing backend
-
-Using Docker + CI/CD for repeatable deployments
-
-Writing unit tests around core backend logic
-
----
+From a development perspective, this project demonstrates full-stack development, REST API integration, LLM integration, authentication, database management, automated testing, Docker, and CI/CD.
 
 ## 🛠️ Tech Stack
 
-| Layer                  | Technology                         |
-| ---------------------- | ---------------------------------- |
-| **Frontend**           | React (Vite) + TailwindCSS + Axios |
-| **Backend**            | Node.js + Express.js               |
-| **Database**           | MongoDB Atlas                      |
-| **AI Engine**          | Google Gemini API (@google/genai)  |
-| **Authentication**     | JWT + bcryptjs                     |
-| **Containerization**   | Docker                             |
-| **CI/CD**              | GitHub Actions                     |
-| **Testing**            | Jest                               |
-| **Environment Config** | dotenv                             |
-
----
+| Layer | Technology |
+|---|---|
+| Frontend | React.js, Vite, Tailwind CSS, Axios |
+| Backend | Node.js, Express.js |
+| Database | MongoDB Atlas |
+| AI Provider | Groq API |
+| AI Model | openai/gpt-oss-120b |
+| Authentication | JWT, bcryptjs |
+| API Architecture | REST APIs |
+| Testing | Jest |
+| CI/CD | GitHub Actions |
+| Deployment | Vercel |
+| Containerization | Docker, Docker Compose |
+| Environment Configuration | dotenv |
 
 ## ✨ Features
 
-### 🔐 Authentication
+### 🔐 Authentication & Security
 
-* Secure signup/login using JWT
-* Password hashing with bcrypt
+- Secure user registration and login.
+- JWT-based authentication.
+- Password hashing using bcryptjs.
+- Protected routes and authenticated API access.
+- Environment-based secret management.
 
 ### 🧾 Invoice Management
 
-* Create, edit, delete, and filter invoices
-* Auto-filled business details
-* Export invoices as PDF
+- Create, edit, and delete invoices.
+- Manage client information and invoice line items.
+- Track payment statuses.
+- Generate downloadable PDF invoices.
+- Manage invoices through REST APIs.
 
 ### 🧠 AI-Powered Tools
 
-* **AI Invoice Generator:** Convert text → invoice instantly
-* **AI Reminder Emails:** Generate payment reminders
-* **AI Dashboard:** Summarize income, due payments, and insights
+#### AI Invoice Generator
+
+- Convert plain text into structured invoice data.
+- Extract client details, items, quantities, and pricing.
+- Generate invoice drafts using Groq LLM API.
+- Automate repetitive invoice creation workflows.
+
+#### AI Payment Reminder Generator
+
+- Generate professional payment reminder emails.
+- Create contextual reminders for outstanding invoices.
+- Reduce manual effort in payment follow-ups.
+
+#### AI Finance Assistant
+
+- Generate invoice-related summaries and insights.
+- Support financial workflow automation.
+- Assist users with invoice management.
+
+### 📊 Dashboard & Analytics
+
+- Monitor invoice statistics.
+- Track paid and unpaid invoices.
+- View revenue and payment insights.
+- Access invoice records from a centralized dashboard.
 
 ### 📱 Modern UI
 
-* Responsive React + Tailwind design
-* Dark mode ready
-
----
+- Responsive React-based interface.
+- Tailwind CSS styling.
+- Interactive dashboard.
+- Axios-based frontend-backend communication.
 
 ## 🏗️ Architecture Diagram
 
-![Architecture Diagram](./docs/architecture.png)
----
+```text
+                 ┌─────────────────────┐
+                 │    React + Vite     │
+                 │      Frontend       │
+                 │       Vercel        │
+                 └──────────┬──────────┘
+                            │
+                       REST APIs
+                            │
+                 ┌──────────▼──────────┐
+                 │    Node.js +        │
+                 │    Express.js       │
+                 │     Backend         │
+                 │      Vercel         │
+                 └──────┬───────┬──────┘
+                        │       │
+             ┌──────────▼──┐ ┌──▼──────────┐
+             │ MongoDB     │ │ Groq AI API │
+             │ Atlas       │ │ LLM Engine  │
+             └─────────────┘ └─────────────┘
+```
 
 ## 📂 Project Structure
 
-```
+```text
 Finvoice-AI/
 │
 ├── backend/
@@ -154,183 +156,168 @@ Finvoice-AI/
 │       │   ├── pages/
 │       │   ├── utils/
 │       │   ├── test/
-│       │   │   └── fileMock.js
 │       │   ├── App.jsx
 │       │   ├── index.css
 │       │   └── main.jsx
 │       ├── public/
 │       ├── screenshots/
-│       ├── vite.config.js
-│       └── jest.config.cjs
-│
-├── docs/
-│   └── architecture.png
-│
-├── screenshots/
-│   ├── dashboard.png
-│   ├── create-invoice.png
-│   ├── ai-generated.png
-│   ├── reminder-email.png
-│   └── profile-settings.png
+│       └── vite.config.js
 │
 ├── docker-compose.yml
-├── .github/workflows/        # CI/CD pipelines
-├── .env.example              # root example env, if used
+├── .github/
+│   └── workflows/
+│
+├── .env.example
 └── README.md
-
 ```
-
----
 
 ## ⚙️ Installation & Setup
 
-### 🧩 Clone Repository
+### 1. Clone Repository
 
 ```bash
-git clone https://github.com/Harsimar-Sahota/Finvoice-AI.git
+git clone https://github.com/PushpakGanganmale/Finvoice-AI.git
+
 cd Finvoice-AI
 ```
 
----
-
-### 🖥️ Backend Setup
+### 2. Backend Setup
 
 ```bash
 cd backend
+
 npm install
 ```
 
-Create a `.env` file inside the **backend** folder:
+Create a `.env` file inside the backend directory.
 
 ```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL=models/gemini-2.5-flash
 PORT=8000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+GROQ_API_KEY=your_groq_api_key
+GROQ_MODEL=openai/gpt-oss-120b
 ```
 
-Run backend:
+Start the backend server:
 
 ```bash
 npm run dev
 ```
 
----
-
-### 💻 Frontend Setup
+### 3. Frontend Setup
 
 ```bash
-cd ../frontend
+cd frontend/invoice-generator
+
 npm install
+```
+
+Create a `.env` file:
+
+```env
+VITE_API_URL=your_backend_api_url
+```
+
+Start the frontend development server:
+
+```bash
 npm run dev
 ```
 
 Visit:
-👉 [http://localhost:5173](http://localhost:5173)
 
----
+http://localhost:5173
 
 ## 🐳 Docker Setup
 
-To run everything with Docker:
+Run the application using Docker Compose:
 
+```bash
 docker-compose up --build
+```
 
+Ensure the environment variables and service ports are configured correctly in `docker-compose.yml`.
 
-The stack exposes:
+## 🔄 Continuous Integration / Continuous Deployment (CI/CD)
 
-Frontend → http://localhost:5173
+Finvoice AI uses GitHub Actions to automate development workflows.
 
-Backend API → http://localhost:8000/api
+### CI/CD Pipeline
 
-Make sure the ports in docker-compose.yml match these values.
----
+- Automated Jest unit tests.
+- Backend quality checks.
+- Frontend build verification.
+- Automated workflows on GitHub pushes and pull requests.
+- Docker-based environment consistency.
+- Deployment through Vercel.
 
-## ## 🔄 Continuous Integration / Deployment (CI/CD)
+The CI pipeline helps maintain application reliability by verifying builds and tests before changes are integrated.
 
-This project uses **GitHub Actions** to automate quality checks and deployments:
+## 🧪 Testing
 
--  Run builds and **Jest tests** on every push and pull request  
--  Build **Docker images** for consistent environments  
--  Deploy the frontend to **Vercel** and backend to **Render**  
--  Block merges if tests or builds fail  
+Finvoice AI uses Jest for automated unit testing.
 
-CI status is displayed via the badge at the top of this README.
+### Testing Coverage
 
+- Authentication logic.
+- API functionality.
+- AI generation logic with mocked API responses.
+- Invoice-related business logic.
 
-##   Testing (Jest)
-
-Finvoice AI uses **Jest** for unit testing.
-
-### 📋 Coverage
-
-* Auth API tests (login/signup)
-* AI generation tests (mocked Gemini API)
-* Invoice CRUD logic
-* Utility functions (date, parsing)
-
-Run tests:
+### Run Tests
 
 ```bash
 cd backend
-npm run test
+
+npm test
 ```
 
-Optional:
+Run tests in watch mode:
 
 ```bash
 npm run test:watch
 ```
 
----
-
 ## 📈 Scaling Plan
 
-The following strategies outline how Finvoice AI can scale as user traffic and AI usage grow:
-
-| # | Strategy                                  | Purpose                |
-| - | ----------------------------------------- | ---------------------- |
-| 1 | Add **rate limiting** on AI endpoints     | Prevent API abuse      |
-| 2 | Use **Redis queues** for heavy AI tasks   | Handle concurrency     |
-| 3 | Implement **MongoDB indexing**            | Faster invoice queries |
-| 4 | Serve frontend via **CDN**                | Faster global load     |
-| 5 | Store files in **AWS S3**                 | Offload from server    |
-| 6 | Use **Redis caching** for dashboard stats | Improve performance    |
-
----
+| # | Strategy | Purpose |
+|---|---|---|
+| 1 | AI endpoint rate limiting | Prevent API abuse |
+| 2 | Redis queues | Handle asynchronous AI workloads |
+| 3 | MongoDB indexing | Improve invoice query performance |
+| 4 | CDN optimization | Improve frontend delivery |
+| 5 | Cloud file storage | Manage invoice documents efficiently |
+| 6 | Redis caching | Improve dashboard response times |
+| 7 | Financial forecasting | Provide predictive revenue insights |
 
 ## 🔐 Security Practices
 
-* JWT-based authentication
-* Password hashing (bcrypt)
-* Input validation (Zod/Joi)
-* Rate limiting on AI routes
-* CORS + Helmet middleware
-* Environment secrets via `.env`
-* No secrets committed to repo
-
----
+- JWT-based authentication.
+- Password hashing using bcryptjs.
+- Protected API routes.
+- Input validation.
+- Centralized error handling.
+- Environment variables for sensitive credentials.
+- Secure database configuration.
+- API key protection.
+- No secrets committed to GitHub.
 
 ## 💡 Inspiration
 
-> Inspired by **Y Combinator’s RFS**: *Vertical SaaS & AI Tools for Small Businesses*
+Finvoice AI was developed to explore how Artificial Intelligence can automate repetitive financial workflows for freelancers and small businesses.
 
-This project aligns with Y Combinator’s mission of building AI tools that automate real business workflows.
-
----
+The project combines traditional SaaS functionality with LLM-powered automation to simplify invoice generation, payment reminders, and financial management.
 
 ## 👨‍💻 Author
 
-**Harsimar Preet Singh Sahota**
-Full Stack Developer — MERN + AI
+**Pushpak Vilas Ganganmale**
 
-🌐 [GitHub](https://github.com/Harsimar-Sahota)
-💼 [LinkedIn](https://linkedin.com/in/Harsimar-Sahota)
+Software Engineer | Full Stack Developer | AI Enthusiast
 
----
+- GitHub: [PushpakGanganmale](https://github.com/PushpakGanganmale)
+- LinkedIn: [Pushpak Ganganmale](https://linkedin.com/in/pushpak-ganganmale-784a0a32b/)
 
 ## 🪪 License
 
-This project is open-source under the **MIT License**.
----
+This project is licensed under the MIT License.
