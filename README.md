@@ -316,7 +316,7 @@ The project combines traditional SaaS functionality with LLM-powered automation 
 Software Engineer | Full Stack Developer | AI Enthusiast
 
 - GitHub: [PushpakGanganmale](https://github.com/PushpakGanganmale)
-- LinkedIn: [Pushpak Ganganmale](https://linkedin.com/in/pushpak-ganganmale-784a0a32b/)
+- LinkedIn: [Pushpak Ganganmale](https://www.linkedin.com/in/pushpakganganmale/)
 
 ## 🪪 License
 
