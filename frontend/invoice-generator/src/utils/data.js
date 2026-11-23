@@ -77,7 +77,7 @@ export const FAQS = [
   },
   {
     question: "Who built Finvoice AI?",
-    answer: "Finvoice AI was created by Harsimarpreet Singh Sahota as a passion project to simplify invoice management . It was developed to help freelancers, startups, and small businesses generate invoices effortlessly — all for free."
+    answer: "Finvoice AI was created by Pushpak Ganganmale as a passion project to simplify invoice management . It was developed to help freelancers, startups, and small businesses generate invoices effortlessly — all for free."
   },
   {
     question: "How do I change my account name?",

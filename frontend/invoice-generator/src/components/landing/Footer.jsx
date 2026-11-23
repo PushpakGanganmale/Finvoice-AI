@@ -109,7 +109,7 @@ const Footer = () => {
 
             {/* Only LinkedIn Social (per your request) */}
             <div className="mt-4 flex items-center space-x-3">
-              <SocialLink href="https://www.linkedin.com/in/harsimar-sahota">
+              <SocialLink href="https://www.linkedin.com/in/pushpakganganmale/">
                 <Linkedin className="w-4 h-4" />
               </SocialLink>
             </div>
