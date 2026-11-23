@@ -8,7 +8,7 @@ const Privacy = () => {
         <h1 className="text-3xl font-extrabold text-slate-900 mb-4">Privacy Policy</h1>
 
         <p className="text-slate-600 leading-relaxed mb-4">
-          Finvoice AI is a personal and educational project by Harsimarpreet Singh Sahota. It is designed to demonstrate full-stack development and AI integration skills.
+          Finvoice AI is a personal and educational project by Pushpak Ganganmale. It is designed to demonstrate full-stack development and AI integration skills.
         </p>
 
         <p className="text-slate-600 leading-relaxed mb-4">

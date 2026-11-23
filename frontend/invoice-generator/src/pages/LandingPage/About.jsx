@@ -7,7 +7,7 @@ const About = () => {
       <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">About Finvoice AI</h1>
         <p className="text-slate-600 leading-relaxed mb-6">
-          Finvoice AI was built by <strong>Harsimarpreet Singh Sahota</strong> to make invoice management simple and smart using modern AI.
+          Finvoice AI was built by <strong>Pushpak Ganganmale</strong> to make invoice management simple and smart using modern AI.
           It helps users quickly create, edit and manage invoices, generate payment reminders, and get AI-powered insights — all in one easy-to-use web app.
         </p>
 

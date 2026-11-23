@@ -120,7 +120,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 py-6 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
             <p className="text-sm">
-              © 2025 Finvoice AI. Built by Harsimarpreet Singh Sahota.
+              © 2025 Finvoice AI. Built by Pushpak Ganganmale.
             </p>
 
             <div className="flex items-center space-x-4 mt-3 md:mt-0">
